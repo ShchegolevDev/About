@@ -1,0 +1,19 @@
+.role {
+  text-align: center;
+  font-size: 0.95rem;
+  color: var(--text-sidebar);
+  font-weight: 600;
+  min-height: 1.3em;
+  margin: 0 0 32px;
+}
+
+.role::after {
+  content: '▏';
+  animation: role-blink 1s step-end infinite;
+}
+
+@keyframes role-blink {
+  50% {
+    opacity: 0;
+  }
+}

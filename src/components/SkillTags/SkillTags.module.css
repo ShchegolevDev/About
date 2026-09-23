@@ -1,0 +1,51 @@
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tags__chip {
+  display: inline-flex;
+  align-items: center;
+  padding: 5px 12px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  border: 1px solid transparent;
+  transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+}
+
+.skill-tags--sidebar .skill-tags__chip {
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text-sidebar);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.skill-tags--sidebar .skill-tags__chip:hover {
+  border-color: var(--text-sidebar-strong);
+  color: var(--text-sidebar-strong);
+}
+
+.skill-tags--stack .skill-tags__chip {
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 0.74rem;
+  padding: 4px 10px;
+}
+
+.skill-tags--stack .skill-tags__chip:hover {
+  border-color: var(--accent);
+}
+
+.skill-tags--soft .skill-tags__chip {
+  background: var(--bg-card);
+  border-color: var(--border);
+  color: var(--text-main);
+  font-size: 0.86rem;
+  padding: 8px 16px;
+}
+
+.skill-tags--soft .skill-tags__chip:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}

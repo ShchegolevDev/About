@@ -1,0 +1,32 @@
+.app {
+  min-height: 100vh;
+}
+
+.app__page {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  max-width: 1440px;
+  margin-inline: auto;
+  min-height: 100vh;
+}
+
+.app__content {
+  padding: 56px clamp(24px, 5vw, 72px);
+}
+
+@media (max-width: 860px) {
+  .app__page {
+    grid-template-columns: 1fr;
+  }
+
+  .app__content {
+    padding: 40px 22px;
+  }
+}
+
+@media print {
+  .app__page {
+    grid-template-columns: 260px 1fr;
+    max-width: none;
+  }
+}
