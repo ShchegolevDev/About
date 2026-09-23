@@ -4,7 +4,7 @@ import styles from './About.module.css';
 
 export const About = () => {
   return (
-    <Section id="about" title="Обо мне" draftNote>
+    <Section id="about" title="Обо мне">
       <p className={styles.about__text}>{ABOUT_TEXT}</p>
     </Section>
   );

@@ -14,19 +14,6 @@
   transform: none;
 }
 
-.section__draft {
-  display: inline-block;
-  font-size: 0.72rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  color: var(--text-muted);
-  background: var(--accent-soft);
-  padding: 3px 10px;
-  border-radius: 999px;
-  margin-bottom: 14px;
-}
-
 .section__title {
   font-size: clamp(1.25rem, 2vw, 1.5rem);
   font-weight: 800;

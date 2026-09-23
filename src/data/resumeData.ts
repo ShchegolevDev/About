@@ -21,8 +21,8 @@ export const CONTACTS: ContactItem[] = [
   { id: 'location', icon: '📍', label: 'Москва, РФ' },
   { id: 'phone', icon: '📞', label: '+7 (936) 123-45-80', href: 'tel:+79361234580' },
   { id: 'email', icon: '✉️', label: 'shchegolev.dev@gmail.com', href: 'mailto:shchegolev.dev@gmail.com' },
-  { id: 'telegram', icon: '💬', label: 'Telegram — добавьте ссылку', href: '#', isPlaceholder: true },
-  { id: 'github', icon: '🐙', label: 'GitHub — добавьте ссылку', href: '#', isPlaceholder: true },
+  { id: 'telegram', icon: '💬', label: '@Dudewithvisa', href: 'https://t.me/Dudewithvisa' },
+  { id: 'github', icon: '🐙', label: 'ShchegolevDev', href: 'https://github.com/ShchegolevDev/About' },
 ];
 
 export const TECH_SKILLS: string[] = [

@@ -6,11 +6,10 @@ import styles from './Section.module.css';
 interface SectionProps {
   id: string;
   title: string;
-  draftNote?: boolean;
   children: ReactNode;
 }
 
-export const Section = ({ id, title, draftNote, children }: SectionProps) => {
+export const Section = ({ id, title, children }: SectionProps) => {
   const { ref, isVisible } = useReveal<HTMLElement>();
 
   return (
@@ -19,7 +18,6 @@ export const Section = ({ id, title, draftNote, children }: SectionProps) => {
       ref={ref}
       className={cx(styles.section, isVisible && styles['section--visible'])}
     >
-      {draftNote && <span className={styles.section__draft}>Черновик — отредактируйте под себя</span>}
       <h2 className={styles.section__title}>{title}</h2>
       {children}
     </section>
