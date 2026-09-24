@@ -1,5 +1,6 @@
 import { About } from './components/About/About';
 import { Courses } from './components/Courses/Courses';
+import { DownloadHint } from './components/DownloadHint/DownloadHint';
 import { Experience } from './components/Experience/Experience';
 import { PrintButton } from './components/PrintButton/PrintButton';
 import { Projects } from './components/Projects/Projects';
@@ -26,6 +27,7 @@ export const App = () => {
         </main>
       </div>
       <PrintButton />
+      <DownloadHint />
     </div>
   );
 };

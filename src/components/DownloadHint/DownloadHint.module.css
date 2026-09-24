@@ -1,0 +1,101 @@
+.hint {
+  position: fixed;
+  right: 24px;
+  bottom: 82px;
+  width: 130px;
+  height: 96px;
+  pointer-events: none;
+  z-index: 19;
+  overflow: visible;
+  animation: hint-fade-in 0.3s ease-out;
+}
+
+.hint--leaving {
+  animation: hint-fade-out 0.6s ease forwards;
+}
+
+.hint__path {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2.5;
+  stroke-dasharray: 170;
+  stroke-dashoffset: 170;
+  animation: hint-draw 1.6s ease-out forwards;
+}
+
+.hint__head {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 2.5;
+  opacity: 0;
+  animation: hint-head-appear 0.25s ease-out forwards;
+  animation-delay: 1s;
+}
+
+@keyframes hint-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes hint-fade-out {
+  to {
+    opacity: 0;
+  }
+}
+
+/* Phase 1 (0–60%) draws a solid line, mimicking a hand sketching it in real
+   time. At 60% it switches — with a hard step, not a smooth interpolation —
+   to a small dash-gap pattern, so the finished arrow reads as dashed. */
+@keyframes hint-draw {
+  0% {
+    stroke-dasharray: 170;
+    stroke-dashoffset: 170;
+  }
+  60% {
+    stroke-dasharray: 170;
+    stroke-dashoffset: 0;
+  }
+  60.1% {
+    stroke-dasharray: 7 6;
+    stroke-dashoffset: 0;
+    animation-timing-function: steps(1, jump-end);
+  }
+  100% {
+    stroke-dasharray: 7 6;
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes hint-head-appear {
+  from {
+    opacity: 0;
+    transform: scale(0.6);
+    transform-origin: 112px 84px;
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .hint,
+  .hint--leaving,
+  .hint__path,
+  .hint__head {
+    animation: none;
+  }
+
+  .hint__path {
+    stroke-dasharray: 7 6;
+    stroke-dashoffset: 0;
+  }
+
+  .hint__head {
+    opacity: 1;
+  }
+}
