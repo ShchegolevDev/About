@@ -98,6 +98,15 @@
   display: flex;
   align-items: center;
   gap: 6px;
+  outline: none;
+  -webkit-tap-highlight-color: transparent;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.timeline__achievements-summary:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
 }
 
 .timeline__achievements-summary::-webkit-details-marker {
