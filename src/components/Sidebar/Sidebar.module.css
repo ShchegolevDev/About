@@ -1,7 +1,7 @@
 .sidebar {
   background: var(--bg-sidebar);
   color: var(--text-sidebar);
-  padding: 48px 30px;
+  padding: 52px 38px;
 }
 
 .sidebar__name {
@@ -13,7 +13,7 @@
 }
 
 .sidebar__section {
-  margin-bottom: 30px;
+  margin-bottom: 34px;
 }
 
 .sidebar__section-title {
@@ -23,6 +23,22 @@
   color: var(--text-sidebar);
   margin: 0 0 14px;
   font-weight: 700;
+}
+
+.sidebar__skill-groups {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.sidebar__skill-group-title {
+  font-size: 0.66rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--text-sidebar);
+  opacity: 0.55;
+  margin: 0 0 8px;
+  font-weight: 600;
 }
 
 .sidebar__note {

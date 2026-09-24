@@ -32,3 +32,16 @@ export interface ProjectCard {
   description: string;
   isPlaceholder?: boolean;
 }
+
+export interface SkillGroup {
+  id: string;
+  label: string;
+  skills: string[];
+}
+
+export interface CourseEntry {
+  id: string;
+  title: string;
+  org: string;
+  meta?: string;
+}

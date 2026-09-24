@@ -1,8 +1,10 @@
 import type {
   ContactItem,
+  CourseEntry,
   ExperienceEntry,
   PersonalInfo,
   ProjectCard,
+  SkillGroup,
 } from "../types/resume";
 
 export const PERSONAL_INFO: PersonalInfo = {
@@ -47,24 +49,41 @@ export const CONTACTS: ContactItem[] = [
   },
 ];
 
-export const TECH_SKILLS: string[] = [
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Redux Toolkit",
-  "TanStack Query",
-  "React Hook Form",
-  "Styled-Components",
-  "HTML5",
-  "CSS3 / SCSS",
-  "Node.js",
-  "Vite",
-  "Vitest / Jest",
-  "Module Federation",
-  "ESLint",
-  "Storybook",
-  "Sentry",
-  "Git",
+export const TECH_SKILL_GROUPS: SkillGroup[] = [
+  {
+    id: "core",
+    label: "Core",
+    skills: ["React", "TypeScript", "Next JS", "JavaScript"],
+  },
+  {
+    id: "state-data",
+    label: "State & Data",
+    skills: [
+      "TanStack Query",
+      "TanStack Router",
+      "Redux Toolkit",
+      "React Hook Form",
+      "React Final Form",
+      "REST API",
+      "Orval",
+    ],
+  },
+  {
+    id: "architecture",
+    label: "Архитектура",
+    skills: ["Feature-Sliced Design (FSD)", "Module Federation", "MVVM"],
+  },
+  {
+    id: "styling",
+    label: "Стили",
+    skills: ["Styled-Components", "CSS Modules", "Tailwind", "CSS3 / SCSS"],
+  },
+  {
+    id: "tooling",
+    label: "Тулинг и тесты",
+    skills: ["Vite", "Vitest / Jest", "Storybook", "ESLint", "Git"],
+  },
+  { id: "monitoring", label: "Мониторинг", skills: ["Sentry"] },
 ];
 
 export const SOFT_SKILLS: string[] = [
@@ -86,6 +105,7 @@ export const EXPERIENCE: ExperienceEntry[] = [
     duration: "1 г. 6 мес.",
     stack: [
       "React",
+      "Next JS",
       "TypeScript",
       "TanStack Query",
       "React Final Form",
@@ -145,8 +165,7 @@ export const EXPERIENCE: ExperienceEntry[] = [
       "ESLint",
     ],
     projectNote:
-      "Проект: Cimple — платформа госзакупок Великобритании, связывающая заказчиков (buyers) " +
-      "и поставщиков (suppliers): тендеры, frameworks, dynamic markets, оценка заявок и social value assessment.",
+      "Проект: Cimple — платформа госзакупок Великобритании, связывающая заказчиков и исполнителей.",
     responsibilities:
       "Разработка UI платформы (кабинеты заказчика и поставщика, карточки тендеров), " +
       "вёрстка и интеграция с REST API, оценка и декомпозиция задач.",
@@ -162,5 +181,17 @@ export const EXPERIENCE: ExperienceEntry[] = [
 
 export const PROJECTS: ProjectCard[] = [];
 
-export const COURSES_PLACEHOLDER_TEXT =
-  "Добавьте пройденные курсы, хакатоны или сертификаты — название, платформа/организатор, год";
+export const COURSES: CourseEntry[] = [
+  {
+    id: "kata-academy",
+    title: "Frontend-разработчик",
+    org: "Kata Academy",
+    meta: "2021",
+  },
+  {
+    id: "yandex-code-battle",
+    title: "Code Battle",
+    org: "Яндекс",
+    meta: "участие, 2024",
+  },
+];
