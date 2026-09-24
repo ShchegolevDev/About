@@ -1,15 +1,17 @@
 import type { ExperienceEntry } from '../../types/resume';
 import { SkillTags } from '../SkillTags/SkillTags';
+import { cx } from '../../utils/cx';
 import styles from './Experience.module.css';
 
 interface ExperienceItemProps {
   entry: ExperienceEntry;
+  isLatest?: boolean;
 }
 
-export const ExperienceItem = ({ entry }: ExperienceItemProps) => {
+export const ExperienceItem = ({ entry, isLatest }: ExperienceItemProps) => {
   return (
     <article className={styles.timeline__item}>
-      <span className={styles.timeline__dot} />
+      <span className={cx(styles.timeline__dot, isLatest && styles['timeline__dot--latest'])} />
       <div className={styles.timeline__content}>
         <div className={styles.timeline__header}>
           <h3 className={styles.timeline__role}>{entry.role}</h3>

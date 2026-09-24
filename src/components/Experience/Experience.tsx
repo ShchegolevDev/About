@@ -7,8 +7,8 @@ export const Experience = () => {
   return (
     <Section id="experience" title="Опыт работы">
       <div className={styles.timeline}>
-        {EXPERIENCE.map((entry) => (
-          <ExperienceItem key={entry.id} entry={entry} />
+        {EXPERIENCE.map((entry, index) => (
+          <ExperienceItem key={entry.id} entry={entry} isLatest={index === 0} />
         ))}
       </div>
     </Section>

@@ -13,6 +13,8 @@
   --radius-lg: 18px;
   --radius-md: 12px;
   --pattern-dot: rgba(32, 35, 42, 0.1);
+  --dot-latest: #c8434f;
+  --dot-latest-glow: rgba(200, 67, 79, 0.45);
 }
 
 :root[data-theme="dark"] {
@@ -25,6 +27,8 @@
   --text-muted: #9199a6;
   --border: #2a2e37;
   --pattern-dot: rgba(229, 231, 235, 0.12);
+  --dot-latest: #e2636d;
+  --dot-latest-glow: rgba(226, 99, 109, 0.5);
 }
 
 * {
