@@ -3,12 +3,13 @@ import { ContactList } from '../ContactList/ContactList';
 import { SkillTags } from '../SkillTags/SkillTags';
 import { TypewriterRole } from '../TypewriterRole/TypewriterRole';
 import { CONTACTS, PERSONAL_INFO, TECH_SKILL_GROUPS } from '../../data/resumeData';
+import photo from '../../assets/photo.jpg';
 import styles from './Sidebar.module.css';
 
 export const Sidebar = () => {
   return (
     <aside className={styles.sidebar}>
-      <Avatar initials="ВЩ" alt={PERSONAL_INFO.name} photoSrc="/photo.jpg" />
+      <Avatar initials="ВЩ" alt={PERSONAL_INFO.name} photoSrc={photo} />
       <h1 className={styles.sidebar__name}>{PERSONAL_INFO.name}</h1>
       <TypewriterRole text={PERSONAL_INFO.role} />
 
